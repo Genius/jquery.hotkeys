@@ -61,7 +61,7 @@
 
 			var special = jQuery.hotkeys.specialKeys[ event.keyCode ],
 				// character codes are available only in keypress
-				character = event.type === "keypress" && String.fromCharCode( event.which ).toLowerCase(),
+				character = event.which > 0 && String.fromCharCode( event.which ).toLowerCase(),
 				modif = "", possible = {};
 
 			// check combinations (alt|ctrl|shift+anything)
